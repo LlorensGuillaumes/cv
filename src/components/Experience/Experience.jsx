@@ -12,8 +12,8 @@ const Experience = ({ experience }) => {
 
       {experience.map((item, index) => {
         return (
-          <div className="container-item_list">
-            <div key={index} className="experiences">
+          <div key={`${item.name}-${item.description}`} className="container-item_list">
+            <div className="experiences">
               <p className="bold experience-item ">{item.date}</p>
               <div className="experiences2">
               <p className="bold experience-item ">{item.name}</p>
