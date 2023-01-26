@@ -1,0 +1,32 @@
+
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.direccion {
+  font-size: 16px;
+}
+.contact {
+  display: block;
+}
