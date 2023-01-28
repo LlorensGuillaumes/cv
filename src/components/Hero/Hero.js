@@ -1,7 +1,11 @@
 import React from "react";
 import "./Hero.css";
+import { useSelector } from "react-redux";
 
-const Hero = ({ hero }) => {
+const Hero = () =>{
+
+    const { hero } = useSelector(state => state.hero)
+
   return (
     <div className="container-hero">
       <div className="contact">

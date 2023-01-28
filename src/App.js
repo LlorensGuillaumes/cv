@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from 'react';
 import "./App.css";
 import About from "./components/About/About";
 import Education from "./components/Education/Education";
@@ -6,16 +7,29 @@ import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
 import More from "./components/More/More";
 import { CV } from "./CV/CV";
+import { setHero } from "./redux/hero/hero.actions";
+import { setAbout } from "./redux/about/about.actions.js";
 
 function App() {
   //destruccturing de CV
   //creamos los componentes y les mandamos los datos
   //en cada componente pinto los datos en div, h3, ettccc
+    //const { hero } = CV;
+  
+   
 
   const { education, hero, experience, habilities, languages, volunteer } = CV;
   const [mostrar, setMostrar] = useState('pepe')
 
-  
+  useEffect(() => {
+      setHero(hero);
+    }, [hero]);
+
+    useEffect(() => {
+      setAbout(About);
+    }, [About]);
+
+
 
   return (
     <div className="App">
